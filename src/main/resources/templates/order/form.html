@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Order Form</title>
+    <!-- boostwrap cdn-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Spring Boot Example</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <!-- Welcome -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/welcome/Jason">Welcome</a>
+                </li>
+                <!-- Order -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/order">Order</a>
+                </li>
+                <!-- Aboutt -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="d-flex justify-content-center">
+        <div class="col-4 m-2">
+            <form method="post" action="/order">
+                <!-- order form -->
+                    <div class="form-group">
+                        <label for="name">Id:</label>
+                        <input type="text" class="form-control col-sm-12" id="id" name="id" />
+                    </div>
+                    <div class="form-group">
+                        <label for="product">Product:</label>
+                        <input type="text" class="form-control col-sm-12" id="product" name="product" />
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Count:</label>
+                        <input type="text" class="form-control col-sm-12" id="count" name="count" />
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="text" class="form-control col-sm-12" id="price" name="price" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

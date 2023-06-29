@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Order Detail</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+
+<body>
+
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Spring Boot Example</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <!-- Home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <!-- Welcome -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/welcome/Jason">Welcome</a>
+                </li>
+                <!-- Order -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/order">Order</a>
+                </li>
+                <!-- Aboutt -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <p class="mt-4">
+        <h2>Order Detail</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Product</th>
+                    <th>Count</th>
+                    <th>Price</th>
+                    <th>Customer</th>
+                    <th>TimeStamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td th:text="${order.id}"></td>
+                    <td th:text="${order.product}"></td>
+                    <td th:text="${order.count}"></td>
+                    <td th:text="${order.price}"></td>
+                    <td th:text="${customer}"></td>
+                    <td th:text="${timestamp}"></td>
+                </tr>
+            </tbody>
+        </table>
+        </p>
+
+    </div>
